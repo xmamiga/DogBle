@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="#32383f"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingLeft="27dp"
+    android:paddingRight="27dp" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/open_ble"
+        android:layout_marginTop="60dp"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp" />
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="60dp" >
+
+        <TextView
+            android:id="@+id/tv_open"
+            android:layout_width="113dp"
+            android:layout_height="43dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_textview_corners"
+            android:gravity="center"
+            android:text="@string/open"
+            android:textColor="#121314"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="113dp"
+            android:layout_height="43dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_textview_corners"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="#121314"
+            android:textSize="19sp" />
+
+    </RelativeLayout>
+    
+</LinearLayout>
