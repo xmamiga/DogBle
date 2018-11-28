@@ -6,6 +6,7 @@ import android.content.Context;
 import android.util.Log;
 import android.util.SparseArray;
 
+import com.amiga.dogble.util.BleUtils;
 import com.cchip.maddogbt.activity.MainActivity;
 import com.cchip.maddogbt.bean.DeviceScanBean;
 import com.cchip.maddogbt.ble.BleApiConfig;
@@ -99,6 +100,8 @@ public class DeviceConnectPresenter {
         if (!deviceFound) {
             Log.e(TAG, "newdevice:" + device.getAddress() + "  " + device.getName());
             Log.e(TAG, "ScanResult:" + scanResult.toString());
+            byte[] scanData=scanResult.getScanRecord().getBytes();
+            Log.e(TAG, "ScanResult :"+ BleUtils.byteArrayToString(scanData));//与旧接口一致
             Log.e(TAG, "scanRecord:" + scanResult.getScanRecord().toString());
             Log.e(TAG, "scanRecord getManufacturerSpecificData:" + scanResult.getScanRecord().getManufacturerSpecificData().toString());
             final DeviceScanBean dsb = new DeviceScanBean(device, rssi,

@@ -10,7 +10,6 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -789,17 +788,17 @@ public class BKActivity extends Activity implements View.OnClickListener {
         isLoss = false;
         isUpdating = true;
 
-        if (!TextUtils.isEmpty(filename)) {
-            File f = new File(filename);
-            mBytesFile = Utils.getBytesFromFile(f);
-            int packets = mBytesFile.length / 16;
-            int remain = mBytesFile.length % 16;
-            if (remain != 0) {
-                packets += 1;
-            }
-
-            MainActivity.mBleService.mProtocol.sendStartUp(mac, (short) packets);
-        }
+//        if (!TextUtils.isEmpty(filename)) {
+//            File f = new File(filename);
+//            mBytesFile = Utils.getBytesFromFile(f);
+//            int packets = mBytesFile.length / 16;
+//            int remain = mBytesFile.length % 16;
+//            if (remain != 0) {
+//                packets += 1;
+//            }
+//
+//            MainActivity.mBleService.mProtocol.sendStartUp(mac, (short) packets);
+//        }
         Log.e(TAG, "startUpdate: " + mac);
         Log.e(TAG, "startUpdate: " + mBytesFile);
     }
